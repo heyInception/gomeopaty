@@ -1,0 +1,20 @@
+// если вы хотите использовать sass-переменные - удалите root
+// colors
+:root {
+    // base
+    --font-family: 'Inter', sans-serif;
+    --font-secondary: "Commissioner", sans-serif;
+    --content-width: 1201px;
+    --container-offset: 15px;
+    --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+    // colors
+    --light-color: #fff;
+    --zoom: 0px;
+    --teal: #00b2a9;
+    --grey: rgba(0, 0, 0, 0.5);
+    --blue: #3BA6F4;
+    --black: #333333;
+    --light-indigo: #7c96a4;
+    --bg-teal: #e5f6f6;
+    --bg-coral-light: rgb(246 139 49 / 25%);
+}

@@ -1,0 +1,108 @@
+.sert {
+    background: url('../../img/sert-bg.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position-y: 0;
+    background-position-x: 70%;
+    &__row {
+        display: flex;
+        flex-flow: row wrap;
+        padding: 20px 0 148px;
+        gap: 25px;
+    }
+    &__column {
+        display: flex;
+        flex-flow: column;
+        width: 100%;
+        gap: 25px;
+        position: relative;
+    }
+    &__title {
+        font-family: var(--font-secondary);
+        font-size: calc(48px - var(--zoom));
+        font-weight: 600;
+        color: var(--black);
+    }
+    &__slider {
+        .swiper-wrapper {
+            height: auto;
+        }
+        .sert__btn {
+            margin-left: auto;
+            border: 1px solid var(--blue);
+            border-radius: 20px;
+            width: 117px;
+            height: 58px;
+            display: flex;
+            flex-flow: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5px;
+            margin-bottom: 25px;
+        }
+        .swiper-button-prev:after,
+        .swiper-rtl .swiper-button-next:after {
+            content: url(../../img/left.svg);
+            font-size: unset;
+            line-height: 44px;
+        }
+        .swiper-button-next:after,
+        .swiper-rtl .swiper-button-prev:after {
+            content: url(../../img/right.svg);
+            font-size: unset;
+            line-height: 44px;
+        }
+        .swiper-button-next,
+        .swiper-button-prev {
+            position: relative;
+            top: unset;
+            width: calc(var(--swiper-navigation-size)/ 44 * 27);
+            height: 18px;
+            margin-top: calc(0px - (var(--swiper-navigation-size)/ 2));
+            z-index: 10;
+            cursor: pointer;
+            display: block;
+        }
+    }
+    &__item {
+        width: 285px;
+    }
+    .swiper {
+        width: 100%;
+        height: 100%;
+    }
+    .swiper-slide {
+        text-align: center;
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.swiper {}
+
+.swiper-wrapper {}
+
+.swiper-slide {}
+
+.image {}
+
+.swiper-button-prev {}
+
+.swiper-button-next {}

@@ -1,0 +1,61 @@
+.heal {
+    &__row {
+        display: flex;
+        flex-flow: row wrap;
+        gap: 50px;
+        padding: 40px 0;
+    }
+    &__column {
+        display: flex;
+        flex-flow: column;
+    }
+    &__title {
+        font-family: var(--font-secondary);
+        font-size: calc(48px - var(--zoom));
+        font-weight: 600;
+        color: var(--black);
+    }
+    &__items {
+        display: flex;
+        flex-flow: row wrap;
+        gap: 20px;
+    }
+    &__item {
+        max-width: 387px;
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+        background: #F1FDFF;
+        border-radius: 20px;
+        gap: 20px;
+        padding: 44px 35px;
+    }
+    &__head {
+        font-family: var(--font-secondary);
+        font-size: calc(30px - var(--zoom));
+        font-weight: 600;
+        color: var(--black);
+    }
+    &__lists {
+        list-style: none;
+        display: flex;
+        flex-flow: column;
+        gap: 15px;
+        padding: 0;
+    }
+    &__list {
+        font-size: calc(16px - var(--zoom));
+        font-weight: 400;
+        color: var(--black);
+        position: relative;
+        &::before {
+            position: relative;
+            content: url(../../img/heal_list.svg);
+            width: 16px;
+            height: 11px;
+            left: 0;
+            padding-right: 15px;
+            top: 0;
+        }
+    }
+}

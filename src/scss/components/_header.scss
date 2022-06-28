@@ -1,0 +1,95 @@
+.header {
+    &__row {
+        display: flex;
+        flex-flow: row wrap;
+        padding: 35px 0;
+    }
+    &__logo {
+        flex: 1 0 0;
+        display: flex;
+        flex-flow: column;
+    }
+    &__l-head {
+        font-weight: 700;
+        font-size: calc(20px + var(--zoom));
+        line-height: 24px;
+        background: linear-gradient(180deg, #61D6D8 0%, #57C1D5 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+    }
+    &__l-subhead {
+        font-weight: 500;
+        font-size: calc(12px + var(--zoom));
+        line-height: 15px;
+        color: var(--grey);
+    }
+    &__nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 3 0 0;
+    }
+    &__nav-list {
+        display: flex;
+        flex-flow: row;
+        list-style: none;
+        gap: 51px;
+        padding: 0;
+        margin: 0;
+    }
+    &__nav-item {}
+    &__nav-link {
+        font-weight: 400;
+        font-size: calc(16px + var(--zoom));
+        line-height: 19px;
+        color: var(--grey);
+        transition: linear .2s;
+        &:hover {
+            color: var(--blue);
+        }
+        &_active {
+            color: var(--blue);
+        }
+    }
+    &__data {
+        display: flex;
+        flex-flow: column;
+        align-items: flex-start;
+        flex: 1 0 0;
+    }
+    &__phone {
+        a {
+            font-weight: 600;
+            font-size: calc(19px + var(--zoom));
+            line-height: 23px;
+            color: var(--black);
+        }
+    }
+    &__mail {
+        a {
+            font-size: calc(14px + var(--zoom));
+            color: var(--black);
+        }
+    }
+    &__call {
+        display: flex;
+        justify-content: flex-end;
+        flex: 1 0 0;
+    }
+    &__call-btn {
+        font-weight: 600;
+        font-size: calc(18px + var(--zoom));
+        line-height: 22px;
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+        align-items: center;
+        height: 42px;
+        background: #3D93E1;
+        border-radius: 20px;
+        color: #fff;
+        padding: 0 25px;
+    }
+}
