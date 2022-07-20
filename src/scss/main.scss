@@ -5,7 +5,13 @@
 @import "mixins";
 @import "fonts";
 @import "settings";
+.burger {
+    display: none;
+    @include burger
+}
+
 // подключения компонентов страницы
+@import "./components/wp-style";
 @import "./components/header";
 @import "./components/main-screen";
 @import "./components/options";
@@ -13,4 +19,10 @@
 @import "./components/sert";
 @import "./components/heal";
 @import "./components/home-form";
+@import "./components/faq";
+@import "./components/price";
+@import "./components/reviews";
+@import "./components/text-b";
+@import "./components/footer";
+@import "./components/media";
 // тестовые стили, удалите их
