@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="gomeo-page">
+    <div class="site-container">
+        @include('partials/header.html') @include('partials/gomeo/main-screen.html')
+        <main class="main">
+            <section class="text-b">
+                <div class="container">
+                    <div class="text-b__row">
+                        <div class="text-b__column">
+                            <div class="text-b__footer">Не ждите, когда болезнь возьмёт верх, при своевременном обращении к врачу-гомеопату удастся справиться с заболеванием и избежать его рецидивов.</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            @include('partials/heal.html')
+        </main>
+
+        @include('partials/footer.html')
+
+    </div>
+</body>
+
+</html>
