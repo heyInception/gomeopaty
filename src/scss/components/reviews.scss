@@ -1,0 +1,92 @@
+.reviews {
+    &__row {
+        display: flex;
+        flex-flow: row wrap;
+        gap: 50px;
+        padding: 40px 0;
+        margin: 25px 0;
+    }
+    &__title {
+        font-weight: 600;
+        font-size: calc(48px + var(--zoom));
+        line-height: 59px;
+        color: var(--black);
+    }
+    &__items {
+        display: flex;
+        flex-flow: column;
+        gap: 50px;
+    }
+    &__item {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        &:nth-child(odd) {
+            background: url(../../img/reviews-bg.png);
+            background-repeat: no-repeat;
+        }
+        &:nth-child(even) {
+            background: url(../../img/reviews-bg-even.png);
+            background-repeat: no-repeat;
+            background-position-x: right;
+            .reviews__img {
+                order: 2;
+            }
+            .reviews__content {
+                order: 1;
+            }
+        }
+    }
+    &__img {
+        flex: 0 0 12%;
+        img {
+            max-width: 145px;
+            border-radius: 50%;
+        }
+    }
+    &__content {
+        flex: 0 0 80%;
+        border: 1px solid #85EBDB;
+        border-radius: 20px;
+        padding: 40px 35px;
+    }
+    &__text {
+        font-weight: 400;
+        font-size: calc(16px + var(--zoom));
+        line-height: 140%;
+        color: var(--grey);
+        margin-bottom: 20px;
+    }
+    &__name {
+        font-weight: 600;
+        font-size: calc(18px + var(--zoom));
+        line-height: 22px;
+        color: #000000;
+        &_mobile {
+            visibility: hidden;
+            opacity: 0;
+        }
+    }
+    &__year {
+        font-weight: 400;
+        font-size: calc(16px + var(--zoom));
+        color: #000000;
+        &_mobile {
+            visibility: hidden;
+            opacity: 0;
+        }
+    }
+    &__more {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    &__btn {
+        font-weight: 600;
+        font-size: calc(18px + var(--zoom));
+        line-height: 22px;
+        color: #3BA6F4;
+        border-bottom: 1px solid #3BA6F4;
+    }
+}

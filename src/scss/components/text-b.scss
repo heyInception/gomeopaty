@@ -1,0 +1,35 @@
+.text-b {
+    &__row {
+        display: flex;
+        flex-flow: row wrap;
+        gap: 25px;
+        padding: 60px 0;
+        margin: 25px 0;
+    }
+    &__column {
+        display: flex;
+        flex-flow: column;
+        gap: 25px;
+    }
+    &__title {
+        font-family: var(--font-secondary);
+        font-weight: 500;
+        font-size: calc(30px + var(--zoom));
+        line-height: 135%;
+        color: var(--blue);
+    }
+    &__content {
+        font-weight: 400;
+        font-size: calc(16px + var(--zoom));
+        line-height: 140%;
+        color: var(--grey);
+    }
+    &__footer {
+        font-family: var(--font-secondary);
+        font-weight: 500;
+        font-size: calc(30px + var(--zoom));
+        line-height: 135%;
+        color: var(--blue);
+        text-align: center;
+    }
+}
