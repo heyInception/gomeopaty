@@ -21,17 +21,17 @@ console.log(mobileCheck())
 // import './functions/fix-fullheight';
 
 // Реализация бургер-меню
-// import { burger } from './functions/burger';
+import { burger } from './functions/burger';
 
 // Реализация остановки скролла (не забудьте вызвать функцию)
-// import { disableScroll } from './functions/disable-scroll';
+import { disableScroll } from './functions/disable-scroll';
 
 // Реализация включения скролла (не забудьте вызвать функцию)
-// import { enableScroll } from './functions/disable-scroll';
+import { enableScroll } from './functions/disable-scroll';
 
 // Реализация модального окна
-// import GraphModal from 'graph-modal';
-// const modal = new GraphModal();
+import GraphModal from 'graph-modal';
+const modal = new GraphModal();
 
 // Реализация табов
 // import GraphTabs from 'graph-tabs';
@@ -54,15 +54,52 @@ import Swiper, { Navigation, Pagination } from 'swiper';
 Swiper.use([Navigation, Pagination]);
 const swiper = new Swiper('.sert__slider', {
     slidesPerView: 4,
+    spaceBetween: 10,
     navigation: {
         nextEl: ".sert__btn .swiper-button-next",
         prevEl: ".sert__btn .swiper-button-prev",
     },
+
+    breakpoints: {
+        // when window width is >= 320px
+        320: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+            centeredSlides: true,
+            roundLengths: true,
+            loop: true,
+            loopAdditionalSlides: 30,
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+            },
+        },
+        // when window width is >= 480px
+        576: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+            centeredSlides: true,
+            roundLengths: true,
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+            },
+        },
+        // when window width is >= 640px
+        640: {
+            slidesPerView: 4,
+            spaceBetween: 10,
+            centeredSlides: false,
+            loop: true,
+            pagination: false,
+        }
+    }
 });
 
 // Подключение анимаций по скроллу
-// import AOS from 'aos';
-// AOS.init();
+import AOS from 'aos';
+AOS.init();
 
 // Подключение параллакса блоков при скролле
 // import Rellax from 'rellax';
@@ -88,3 +125,6 @@ const swiper = new Swiper('.sert__slider', {
 // };
 
 // validateForms('.form-1', rules1, afterForm);
+
+// Модальное окно для сертификатов
+import { modalClone } from './functions/modalClone';
