@@ -1,9 +1,14 @@
 .about {
+    background: url('../../img/about-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 80%;
     &__row {
         display: flex;
         flex-flow: row wrap;
         align-items: flex-end;
         padding: 40px 0;
+        margin: 25px 0;
     }
     &__left {
         display: flex;
@@ -13,19 +18,19 @@
     }
     &__title {
         font-family: var(--font-secondary);
-        font-size: calc(48px - var(--zoom));
+        font-size: calc(48px + var(--zoom));
         font-weight: 600;
         color: var(--black);
     }
     &__subtitle {
         font-family: var(--font-secondary);
-        font-size: calc(25px - var(--zoom));
+        font-size: calc(25px + var(--zoom));
         font-weight: 500;
         color: var(--blue);
     }
     &__text {
         p {
-            font-size: calc(16px - var(--zoom));
+            font-size: calc(16px + var(--zoom));
             font-weight: 400;
             line-height: 140%;
             color: #4F4F4F;
